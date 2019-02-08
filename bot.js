@@ -15,12 +15,6 @@ client.on('ready', () => {
     client.user.setActivity(`О! Привет, ${lox}!`,{ type: 'PLAYING' });
     console.log(`Запущен.`/* Сервера: ${client.guilds.size}`*/);
 })
-    client.on('guildCreate', () => {
-        client.user.setActivity(`О! Привет, ${lox}!`,{ type: 'PLAYING' });
-    });
-    client.on('guildDelete', () => {
-        client.user.setActivity(`О! Привет, ${lox}!`,{ type: 'PLAYING' });
-    });
 
 client.on('message', message => {
     if (message.channel.type !== 'text' || message.author.bot || !message.content.startsWith(prefix) || !message.channel.permissionsFor(message.guild.me).has("SEND_MESSAGES")) return;
